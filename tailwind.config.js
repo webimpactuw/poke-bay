@@ -6,6 +6,9 @@ export default {
       'lato': ['Lato'],
       'oswald': ['Oswald'],
     },
+    fontSize: {
+      nav: ['24px', '28.8px'],
+    },
     extend: {
       colors: {
         primary: '#35728C',

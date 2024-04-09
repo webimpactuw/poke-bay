@@ -1,6 +1,10 @@
+import Navbar from "../Navbar";
+
 const Menu = () => {
   return (
-    <div>menu</div>
+    <div>
+      <Navbar />
+    </div>
   )
 }
 
