@@ -2,3 +2,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Footer Section */
+
+.footer {
+    background: url("./assets/footerbackground.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 468px) {
+    /* Footer Section Tablet Size */
+    .footer {
+        background: url("./assets/lgfooterbackground.svg");
+    }
+}
