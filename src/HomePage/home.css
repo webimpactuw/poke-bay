@@ -1,0 +1,17 @@
+:root {
+    background-color: #FFFDF9;
+}
+
+.entrance {
+    width: 30vw;
+}
+
+.button {
+    border-radius: 2rem;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    width: 10vw;
+    text-align: center;
+}

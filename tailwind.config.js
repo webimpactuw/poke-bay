@@ -4,8 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#35728C',
+        primary: '#12748f',
         secondary: '#97C7DC',
+        white: '#FFFDF9', 
       },
       fontFamily: {
         lato: ['Lato'],
