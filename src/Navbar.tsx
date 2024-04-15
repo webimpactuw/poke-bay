@@ -31,7 +31,6 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full z-20 mt-[33px]">
       <div className="flex flex-wrap justify-between items-center mx-[6%]">
-        {/* LOGO */}
         <NavLink to="/">
           <img
             src={logo}
@@ -40,7 +39,6 @@ const Navbar = () => {
           />
         </NavLink>
 
-        {/* MOBILE MENU */}
         <div className="flex sm:hidden flex-wrap">
           <button onClick={() => setIsSideBarOpen((prev) => !prev)}>
             <LuMenu className="size-6 text-primary"></LuMenu>
@@ -100,7 +98,6 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* DESKTOP MENU */}
         <div className="hidden sm:flex">
           <ul className="flex gap-8 text-primary">
             <li>
