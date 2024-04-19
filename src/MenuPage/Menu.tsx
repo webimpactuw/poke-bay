@@ -1,11 +1,5 @@
-import Navbar from "../Navbar";
-
 const Menu = () => {
-  return (
-    <div>
-      <Navbar />
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default Menu
+export default Menu;
