@@ -1,44 +1,56 @@
 function About() {
   return (
     <>
-      <section className='flex justify-center items-center flex-col'>
-        <h1 className=' text-5xl py-5 md:m-15 '>About</h1>
-        <img src='/src/images/hero-img.png' className='w-5/6 min-w-64' />
+      <section className='flex justify-center items-center flex-col gap-12 text-primary'>
+        <h1 className=' text-5xl md:m-15 font-oswald font-semibold'>About</h1>
+        <img src='/src/images/hero-img.png' alt='' className='w-5/6' />
       </section>
 
-      <section className=' justify-self flex flex-col justify-center items-center w-screen max-w-screen-sm md:max-w-fit '>
-        <article className='flex flex-col md:flex-row my-5 w-5/6 md:gap-x-60'>
-          <div className='flex flex-col min-w-64'>
-            <h2 className='text-3xl flex flex-col py-5'>
-              <span className=' text-sm py-5'>About Us</span>Our Restaurant
+      <section className='flex flex-col gap-16 py-16 items-center text-primary m-auto'>
+        <article className='flex flex-col gap-8 md:flex-row items-center justify-between w-5/6 md:gap-20'>
+          <div className='flex flex-col gap-4 md:max-w-md'>
+            <h2 className='text-3xl flex flex-col gap-1 font-oswald font-semibold'>
+              <span className='text-sm font-light uppercase'>About Us</span>
+              Our Restaurant
             </h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis
-              fuga saepe eligendi nobis? Odio necessitatibus id deleniti
-              exercitationem qui quaerat sapiente incidunt neque vitae vero,
-              quia, fugit, quo optio obcaecati!
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum
             </p>
           </div>
           <img
             src='/src/images/about-img-1.png'
-            className='w-screen md:w-3/6 min-w-64'
+            alt=''
+            className='w-screen md:w-3/6 aspect-[3/2] object-cover'
           />
         </article>
-        <article className='flex flex-col md:flex-row my-5 w-5/6 gap-x-60'>
-          <div className='flex flex-col min-w-64'>
-            <h2 className='text-3xl flex flex-col py-5'>
-              <span className=' text-sm py-5'>Meet The Owner</span>Owner Name
+        <article className='flex flex-col gap-8 md:flex-row items-center justify-between w-5/6 md:gap-20'>
+          <div className='flex flex-col gap-4 md:max-w-md'>
+            <h2 className='text-3xl flex flex-col gap-1 font-oswald font-semibold'>
+              <span className='text-sm font-light uppercase'>
+                Meet The Owner
+              </span>
+              Owner Name
             </h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis
-              fuga saepe eligendi nobis? Odio necessitatibus id deleniti
-              exercitationem qui quaerat sapiente incidunt neque vitae vero,
-              quia, fugit, quo optio obcaecati!
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum
             </p>
           </div>
           <img
             src='/src/images/about-img-2.png'
-            className='w-screen md:w-3/6 min-w-64'
+            alt=''
+            className='w-screen md:w-3/6 aspect-[3/2] object-cover object-top'
           />
         </article>
       </section>

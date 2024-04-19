@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <nav className='fixed w-full z-20 mt-[33px]'>
-      <div className='flex flex-wrap justify-between items-center mx-[6%]'>
+      <div className='flex flex-wrap justify-between items-center w-5/6 m-auto'>
         <NavLink to='/'>
           <img
             src={logo}
