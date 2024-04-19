@@ -29,7 +29,7 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <nav className='fixed w-full z-20 mt-[33px]'>
+    <nav className='fixed w-full z-20 bg-white  py-[2%]'>
       <div className='flex flex-wrap justify-between items-center mx-[6%]'>
         <NavLink to='/'>
           <img

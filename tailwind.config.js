@@ -6,7 +6,7 @@ export default {
       colors: {
         primary: '#12748f',
         secondary: '#97C7DC',
-        white: '#FFFDF9', 
+        white: '#fffdf8', 
       },
       fontFamily: {
         lato: ['Lato'],
