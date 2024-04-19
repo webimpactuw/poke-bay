@@ -1,13 +1,15 @@
-import Navbar from "./Navbar";
-import { Outlet } from "react-router-dom";
+import Navbar from './Navbar';
+import { Outlet } from 'react-router-dom';
 
 const Root = () => {
   return (
     <>
-        <Navbar></Navbar>
-        <main><Outlet/></main>
+      <Navbar></Navbar>
+      <main className='pt-28'>
+        <Outlet />
+      </main>
     </>
-  )
-}
+  );
+};
 
-export default Root
+export default Root;
