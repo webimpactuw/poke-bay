@@ -3,7 +3,9 @@
 }
 
 .entrance {
-    width: 30vw;
+    width: 40vw;
+    height: 40vh;
+    object-fit: cover;
 }
 
 .button {

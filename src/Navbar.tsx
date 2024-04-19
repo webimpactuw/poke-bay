@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom';
-import logo from '../public/img/logo.png';
+import logo from './images/logo.png';
 import { useState, useEffect, useRef, RefObject } from 'react';
 import { LuMenu } from 'react-icons/lu';
 import { CgClose } from 'react-icons/cg';

@@ -1,41 +1,40 @@
-import sushi from "../images/sushi.png"
 import "./home.css"
-import entrance from "../images/entrance.png"
+import entrance from "../images/entrance.jpg"
 import { Link } from "react-router-dom"
 import bowl1 from "../images/bowl-big-kahuna.png"
 import bowl2 from "../images/bowl-rainbow.png"
 import bowl3 from "../images/bowl-salmon-style.png"
 import Navbar from "../Navbar"
+import logo from '../images/logo.png'
 
 const Home = () => {
   const arrayData = [{ name: "Big Kahuna", image: bowl1, desc: 'classic salmon, lettuce, red cabbage, cucumber, sweet onion, edamame, green onion, seaweed salad, masago, japanese dressing, sesame seeds' },
   { name: "Rainbow", image: bowl2, desc: 'classic tuna, classic salmon, crab salad, cucumber, carrots, lettuce, pickled ginger, masago, mango, green onion, citrus ponzu, spicy mayo, furikake' },
   { name: "Salmon Style", image: bowl3, desc: 'classic salmon, lettuce, red cabbage, cucumber, sweet onion, edamame, green onion, seaweed salad, masago, japanese dressing, sesame seeds' }];
   return (
-    <div>
+    <div className="flex flex-row">
         <Navbar/>
-        <div className="background">
+        <div>
 
-        <div className="flex justify-around w-[100%]">
-          <div className="flex space-x-10 text-9xl font-black">
-            <p className="text-red-500">P</p>
-            <img className="w-32 h-32" src={sushi}></img>
-            <p className="text-green-700">K</p>
-            <p className="text-cyan-600">E</p>
-            <p className="text-sky-600">B</p>
-            <p className="text-violet-500">A</p>
-            <p className="text-red-600">Y</p>
-          </div>
-          <div className="flex flex-col align-center text-center">
-            <div className="text-primary text-xl">Fresh Poke in the U-District</div>
-
-            <button className="bg-primary text-slate-50 w-50 align-center button"><Link to="/menu">View Menu</Link></button>
-          </div>
+          <div className="flex flex-col justify-center pt-[15%]">
+            <div className="flex  space-x-6 flex-row justify-center items-center text-[10vw] pl-[2.5%] font-black">
+                  <p className="text-red-500">P</p>
+                  <img className="w-[10vw] h-[10vw]" src={logo}></img>
+                  <p className="text-green-700">K</p>
+                  <p className="text-cyan-600 pr-10">E</p>
+                
+                  <p className="text-sky-600">B</p>
+                  <p className="text-violet-500">A</p>
+                  <p className="text-red-600">Y</p>
+            </div>
+            <div className="flex flex-col align-center justify-center text-center pb-10">
+              <div className="text-primary text-xl">Fresh Poke in the U-District</div>
+            </div>
         </div>
         <div className="bg-primary text-white flex flex-row justify-around p-10">
-          <img className="entrance" src={entrance}></img>
-          <div className="flex py-5 flex-col">
-            <h1 className="font-oswald text-3xl">Our Mission</h1>
+          <img className="w-1/3" src={entrance}></img>
+          <div className="flex py-5 flex-col w-1/2 h-full">
+            <h1 className="font-oswald text-3xl ">Our Mission</h1>
             <p>We like building amazing all-inclusive poke. I hate this garblfs djlkfjjkdjkflsjfkl sjkldjf klsjkfjklsdjklfo. </p>
           </div>
         </div>
@@ -45,7 +44,7 @@ const Home = () => {
           <h1>Featured Bowls</h1>
           <div className="flex flex-row justify-around">
             {arrayData.map(item => (
-              <div key={item.name} className="w-60">
+              <div key={item.name} className="w-1/6">
                 <img src={item.image}></img>
                 <div>{item.name}</div>
                 <div>{item.desc}</div>
