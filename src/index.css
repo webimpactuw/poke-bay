@@ -17,3 +17,16 @@
         background: url("./assets/lgfooterbackground.svg");
     }
 }
+
+.home-background {
+    background: url("./assets/mini-background.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media (min-width: 520px) {
+    /* Footer Section Tablet Size */
+    .footer {
+        background: url("./assets/home-background.svg");
+    }
+}

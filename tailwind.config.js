@@ -11,6 +11,8 @@ export default {
       fontFamily: {
         lato: ['Lato'],
         oswald: ['Oswald'],
+        inter: ['Inter', 'sans-serif'],
+        league: ['League Spartan', 'Spartan', 'sans-serif']
       },
       fontSize: {
         nav: ['16px'],
