@@ -21,7 +21,7 @@
 .home-background {
     background: url("./assets/mini-background.svg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 @media (min-width: 520px) {
