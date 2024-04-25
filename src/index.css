@@ -27,6 +27,8 @@
 @media (min-width: 520px) {
     /* Footer Section Tablet Size */
     .footer {
-        background: url("./assets/home-background.svg");
+        background: url("./assets/footerbackground.svg");
+        background-size: cover;
+
     }
 }
