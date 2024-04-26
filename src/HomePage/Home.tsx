@@ -45,11 +45,11 @@ const Home = () => {
         </div>
 
         <div className='home-background'>
-          <div className='text-center text-white pt-[20%]'>
+          <div className='text-center text-white pt-[20%] w-5/6 m-auto flex flex-col items-center gap-16'>
             <h1 className='font-oswald font-semibold text-5xl pt-5'>
               Featured Bowls
             </h1>
-            <div className='flex flex-col md:flex-row justify-center items-center md:justify-around pt-[3%]'>
+            <div className='flex flex-col md:flex-row justify-center items-center md:justify-between'>
               {arrayData.map((item) => (
                 <div key={item.name} className='md:w-[30%] w-1/2'>
                   <img className='' src={item.image}></img>
@@ -62,38 +62,40 @@ const Home = () => {
                 </div>
               ))}
             </div>
-            <div className='py-3 mt-[5%] mb-[10%] w-[15%] justify-around rounded-lg text-primary bg-white'>
+            <div className='py-3 px-6 w-fit rounded-full text-primary bg-white'>
               <Link to='/menu'>View Full Menu</Link>
             </div>
           </div>
 
-          <div className=' text-primary flex flex-row max-md:flex-col justify-around p-10'>
-            <img className='md:w-1/3' src={entrance}></img>
-            <div className='flex py-5 flex-col md:w-1/2 h-full align-middle'>
-              <h1 className='font-inter text-3xl font-semibold'>Our Mission</h1>
-              <p className='font-lato pt-5'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-              <button className='bg-primary text-white w-1/4 py-2 mt-4 rounded-xl'>
-                <Link to='/about'>View More</Link>
-              </button>
+          <div className='w-5/6 m-auto pt-[400px] pb-24'>
+            <div className=' text-primary flex flex-row max-md:flex-col justify-between'>
+              <img className='md:w-2/5' src={entrance}></img>
+              <div className='flex flex-col gap-6 md:w-2/5'>
+                <h1 className='text-3xl font-semibold'>Our Mission</h1>
+                <p className='font-lato'>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <button className='py-3 px-6 w-fit rounded-full bg-primary text-white'>
+                  <Link to='/about'>View More</Link>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        <div className='flex justify-center md:justify-around'>
-          <div className='flex max-md:flex-col flex-row text-primary'>
+        <div className='w-5/6 m-auto'>
+          <div className='flex max-md:flex-col flex-row text-primary justify-between items-center'>
             <div className='flex flex-col md:w-1/2'>
-              <h1 className='text-2xl font-semibold'>View Us</h1>
+              <h1 className='text-2xl font-semibold'>Visit Us</h1>
               <p className='pt-2'>Poke Bay</p>
               <p>4215 University Way NE</p>
               <p>Seattle, WA 98105</p>
               <p className='py-5'>Open every day from 11 AM to 9 PM</p>
             </div>
             <iframe
-              className='md:w-1/2 border-none'
+              className='md:w-2/5 border-none aspect-[3/2]'
               src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2687.317730479997!2d-122.31600312358195!3d47.658823684369665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54901595ef185da9%3A0x10610fc1d56cf1f3!2sPoke%20Bay!5e0!3m2!1sen!2sus!4v1712895811651!5m2!1sen!2sus'
               loading='lazy'
             ></iframe>
