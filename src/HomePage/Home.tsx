@@ -70,9 +70,9 @@ const Home = () => {
           <div className='w-5/6 m-auto pt-[400px] pb-24'>
             <div className=' text-primary flex flex-row max-md:flex-col justify-between'>
               <img className='md:w-2/5' src={entrance}></img>
-              <div className='flex flex-col gap-6 md:w-2/5'>
+              <div className='flex flex-col gap-6 max-md:items-center max-md:pt-[4%] md:w-2/5'>
                 <h1 className='text-3xl font-semibold'>Our Mission</h1>
-                <p className='font-lato'>
+                <p className='font-lato max-md:w-5/6'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -85,7 +85,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className='w-5/6 m-auto'>
+        <div className='w-5/6  m-auto'>
           <div className='flex max-md:flex-col flex-row text-primary justify-between items-center'>
             <div className='flex flex-col md:w-1/2'>
               <h1 className='text-2xl font-semibold'>Visit Us</h1>
