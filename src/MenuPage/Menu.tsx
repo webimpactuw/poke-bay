@@ -1,4 +1,9 @@
 import BaseImage from '../images/choose-bowl-base.jpeg';
+import MenuImg1 from '../images/menu-bowl-1.jpeg';
+import MenuImg2 from '../images/menu-bowl-2.jpeg';
+import MenuImg3 from '../images/menu-bowl-3.jpeg';
+import MenuImg4 from '../images/menu-bowl-4.jpeg';
+
 
 const Menu = () => {
   return (
@@ -31,21 +36,81 @@ const Menu = () => {
           </div>
         </div>
       </div>
-      <div className="flex mx-12 my-8 text-primary">
-        <div className="m-4">
-          <div>Insert Photo Here</div>
-          <div>Insert Photo Here</div>
-          <div>Insert Photo Here</div>
+      <div className="flex mx-24 my-8 text-primary">
+        <div className="m-4 space-y-5 lg:block hidden">
+          <div className="aspect-square overflow-hidden size-[28rem]">
+            <img src={MenuImg1} className="object-cover -translate-y-1/3"/>
+          </div>
+          <div className="aspect-square overflow-hidden size-[28rem]">
+            <img src={MenuImg2} className="object-cover -translate-y-1/3 scale-105"/>
+          </div>
+          <div className="aspect-square overflow-hidden size-[28rem]">
+            <img src={MenuImg3} className="object-cover -translate-y-1/3 scale-105 translate-x-3"/>
+          </div>
+          <div className="aspect-square overflow-hidden size-[28rem]">
+            <img src={MenuImg4} className="object-cover -translate-y-1/3 scale-105"/>
+          </div>
         </div>
         <div className="m-4">
           <div>
-            <p className="text-lg font-oswald font-bold">Our Signature Bowls</p>
-            <p className="text-xs">Regular $13.99 Large $16.99</p>
+            <p className="text-2xl font-oswald font-semibold">Our Signature Bowls</p>
+            <p className="text-s">Regular $13.99 Large $16.99</p>
+          </div>
+          <div className="space-y-10 my-10">
+            <div className="space-y-2">
+              <p className="font-oswald text-xl">Salmon Style Bowl</p>
+              <p>classic salmon, lettuce, red cabbage, cucumber, sweet onion, edamame, green onion, seaweed salad, masago, japanese dressing, sesame seeds</p>
+            </div>
+            <div className="space-y-2">
+              <p className="font-oswald text-xl">Tuna Lover Bowl</p>
+              <p>classic tuna, spicy tuna, cucumber, red cabbage, edamame, cherry tomato, carrots, seaweed salad, green onion, spicy mayo, sesame seeds, crispy onion</p>
+            </div>
+            <div className="space-y-2">
+              <p className="font-oswald text-xl">Rainbow Bowl</p>
+              <p>classic salmon, lettuce, red cabbage, cucumber, sweet onion, edamame, green onion, seaweed salad, masago, japanese dressing, sesame seeds</p>
+            </div>
+            <div className="space-y-2">
+              <p className="font-oswald text-xl">Big Kahuna Bowl</p>
+              <p>classic tuna, spicy tuna, cucumber, red cabbage, edamame, cherry tomato, carrots, seaweed salad, green onion, spicy mayo, sesame seeds, crispy onion</p>
+            </div>
+            <div className="space-y-2">
+              <p className="font-oswald text-xl">Volcano Bowl</p>
+              <p>classic salmon, lettuce, red cabbage, cucumber, sweet onion, edamame, green onion, seaweed salad, masago, japanese dressing, sesame seeds</p>
+            </div>
+            <div className="space-y-2">
+              <p className="font-oswald text-xl">Veggie Bowl</p>
+              <p>classic tuna, spicy tuna, cucumber, red cabbage, edamame, cherry tomato, carrots, seaweed salad, green onion, spicy mayo, sesame seeds, crispy onion</p>
+            </div>
+            <div className="space-y-2">
+              <p className="font-oswald text-xl">Tempura Shrimp Bowl</p>
+              <p>classic tuna, spicy tuna, cucumber, red cabbage, edamame, cherry tomato, carrots, seaweed salad, green onion, spicy mayo, sesame seeds, crispy onion</p>
+            </div>
+            <div className="space-y-2">
+              <p className="font-oswald text-xl">California Dreaming Bowl</p>
+              <p>classic tuna, spicy tuna, cucumber, red cabbage, edamame, cherry tomato, carrots, seaweed salad, green onion, spicy mayo, sesame seeds, crispy onion</p>
+            </div>
+            <div className="space-y-2">
+              <p className="font-oswald text-xl">Dancing Catfish Bowl</p>
+              <p>classic tuna, spicy tuna, cucumber, red cabbage, edamame, cherry tomato, carrots, seaweed salad, green onion, spicy mayo, sesame seeds, crispy onion</p>
+            </div>
+          </div>
+          <div className="space-y-5">
+            <p className="font-oswald text-2xl font-semibold my-6">Side Dishes</p>
+            <div className="flex justify-between"><p>Miso Soup</p><p>$2.00</p></div>
+            <div className="flex justify-between"><p>Spam Musubi</p><p>$3.50</p></div>
+            <div className="flex justify-between"><p>Pork Gyoza (6 pieces)</p><p>$5.88</p></div>
+            <div className="flex justify-between"><p>Chicken Karaage (8 oz)</p><p>$6.88</p></div>
+            <div className="flex justify-between"><p>Tempura Shrimp (3 pieces)</p><p>$6.99</p></div>
+            <div className="flex justify-between"><p>Seaweed Salad</p><p>$3.50</p></div>
+            <div className="flex justify-between"><p>Squid Salad</p><p>$4.99</p></div>
+            <div className="flex justify-between"><p>Hawaiian Mac Salad</p><p>$3.50</p></div>
+            <div className="flex justify-between"><p>Edamame (in shell)</p><p>$3.99</p></div>
           </div>
           <div>
-
+            <p className="font-oswald text-2xl font-semibold my-6">Poke by the Pound</p>
+            <div className="flex justify-between"><p>1/2 lb Poke</p><p>$15.00</p></div>
+            <div className="flex justify-between"><p>1 lb Poke</p><p>$20.00</p></div>
           </div>
-
         </div>
       </div>
     </div>
