@@ -6,13 +6,13 @@ export default {
       colors: {
         primary: '#12748f',
         secondary: '#97C7DC',
-        white: '#fffdf8', 
+        white: '#fffdf8',
       },
       fontFamily: {
         lato: ['Lato'],
         oswald: ['Oswald'],
         inter: ['Inter', 'sans-serif'],
-        league: ['League Spartan', 'Spartan', 'sans-serif']
+        league: ['League Spartan', 'Spartan', 'sans-serif'],
       },
       fontSize: {
         nav: ['16px'],
