@@ -19,33 +19,36 @@ function Menu () {
     return (
       <div>
         <p className="font-oswald font-semibold text-primary text-5xl text-center py-6">Menu</p>
-        <div className="text-center py-4 bg-primary">
-          <div className="text-white flex flex-col">
-            <p className="font-oswald my-2 text-3xl font-semibold">Build Your Own Bowl</p>
-            <p className="text-s font-light max-w-[55ch] flex place-self-center mx-4 my-2">DISCLAIMER: the build-your-own-bowl section is NOT FOR ORDERING, but simply a simulation of what your bowl could look like.</p>
-          </div>
-          <div className="bg-white py-4 sm:py-10 px-10 sm:px-20 mx-20 my-5 text-primary">
-            <div className="space-x-2 space-y-2 :text-left">
-              {(variable == "Base") ? highlightedButton(variable) : regularButton("Base")}
-              {(variable == "Proteins") ? highlightedButton(variable) : regularButton("Proteins")}
-              {(variable == "Sides") ? highlightedButton(variable) : regularButton("Sides")}
-              {(variable == "Sauce") ? highlightedButton(variable) : regularButton("Sauce")}
-              {(variable == "Toppings") ? highlightedButton(variable) : regularButton("Toppings")}
+        <div className="home-bg py-28">
+          <div className="text-center py-4 bg-primary">
+            <div className="text-white flex flex-col">
+              <p className="font-oswald my-2 text-3xl font-semibold">Build Your Own Bowl</p>
+              <p className="text-s font-light max-w-[55ch] flex place-self-center mx-4 my-2">DISCLAIMER: the build-your-own-bowl section is NOT FOR ORDERING, but simply a simulation of what your bowl could look like.</p>
             </div>
-            <div className="flex flex-col sm:flex-row justify-between">
-              <div className="text-left sm:space-y-4 space-y-3 my-5 mt-16 sm:my-16 order-last sm:order-first">
-                {(variable == "Base") ? build({header: "Step 1: Choose a Base", ingredients: ["Sushi Rice", "White Rice", "Spring Mix", "Half & Half"]}): <></>}
-                {(variable == "Proteins") ? build({header: "Step 2: Choose a Protein", ingredients: ["Classic Salmon", "Hawaiian Salmon", "Spicy Salmon", "Seared Ahi Tuna", "Tempura", "Crawfish", "Scallop", "Octopus", "Shrimp", "Sukiyaki", "Grilled Chicken", "Spam", "Unagi ($2)", "Organic Tofu"]}): <></>}
-                {(variable == "Sides") ? build({header: "Step 3: Choose a Side (subject to charges)", ingredients: ["Miso Soup", "Spam Musubi", "Pork Gyoza (6pc)", "Chicken Karage (8oz)", "Tempura Shrimp (3pc)", "Seaweed Salad", "Squid Salad", "Hawaiian Mac Salad", "Edamame"]}): <></>}
-                {(variable == "Sauce") ? build({header: "Step 4: Choose a Sauce ($1 for extra)", ingredients: ["Spicy Mayo", "Eel Sauce", "Shoyu", "Sriracha Hot Chili", "Sweet Chili", "Teriyaki Sauce", "Zesty Mango", "Citrus Ponzu", "Gluten-Free Shoyu", "Japanese Dressing"]}): <></>}
-                {(variable == "Toppings") ? build({header: "Step 5: Choose a Topping (unlimited)", ingredients: ["Crispy Onion", "Crispy Garlic", "Wonton Strips", "Crunchy Tempura", "Furikake", "Sesame Seeds"]}): <></>}
+            <div className="bg-white py-4 sm:py-10 px-10 sm:px-20 mx-20 my-5 text-primary">
+              <div className="space-x-2 space-y-2 :text-left">
+                {(variable == "Base") ? highlightedButton(variable) : regularButton("Base")}
+                {(variable == "Proteins") ? highlightedButton(variable) : regularButton("Proteins")}
+                {(variable == "Sides") ? highlightedButton(variable) : regularButton("Sides")}
+                {(variable == "Sauce") ? highlightedButton(variable) : regularButton("Sauce")}
+                {(variable == "Toppings") ? highlightedButton(variable) : regularButton("Toppings")}
               </div>
-              <div className="sm:size-64 size-44 sm:m-10 place-self-center">
-                <img src={BaseImage} className="object-cover translate-y-7 aspect-square rounded-full w-full h-auto" />
+              <div className="flex flex-col sm:flex-row justify-between">
+                <div className="text-left sm:space-y-4 space-y-3 my-5 mt-16 sm:my-16 order-last sm:order-first">
+                  {(variable == "Base") ? build({header: "Step 1: Choose a Base", ingredients: ["Sushi Rice", "White Rice", "Spring Mix", "Half & Half"]}): <></>}
+                  {(variable == "Proteins") ? build({header: "Step 2: Choose a Protein", ingredients: ["Classic Salmon", "Hawaiian Salmon", "Spicy Salmon", "Seared Ahi Tuna", "Tempura", "Crawfish", "Scallop", "Octopus", "Shrimp", "Sukiyaki", "Grilled Chicken", "Spam", "Unagi ($2)", "Organic Tofu"]}): <></>}
+                  {(variable == "Sides") ? build({header: "Step 3: Choose a Side (subject to charges)", ingredients: ["Miso Soup", "Spam Musubi", "Pork Gyoza (6pc)", "Chicken Karage (8oz)", "Tempura Shrimp (3pc)", "Seaweed Salad", "Squid Salad", "Hawaiian Mac Salad", "Edamame"]}): <></>}
+                  {(variable == "Sauce") ? build({header: "Step 4: Choose a Sauce ($1 for extra)", ingredients: ["Spicy Mayo", "Eel Sauce", "Shoyu", "Sriracha Hot Chili", "Sweet Chili", "Teriyaki Sauce", "Zesty Mango", "Citrus Ponzu", "Gluten-Free Shoyu", "Japanese Dressing"]}): <></>}
+                  {(variable == "Toppings") ? build({header: "Step 5: Choose a Topping (unlimited)", ingredients: ["Crispy Onion", "Crispy Garlic", "Wonton Strips", "Crunchy Tempura", "Furikake", "Sesame Seeds"]}): <></>}
+                </div>
+                <div className="sm:size-64 size-44 sm:m-10 place-self-center">
+                  <img src={BaseImage} className="object-cover translate-y-7 aspect-square rounded-full w-full h-auto" />
+                </div>
               </div>
             </div>
           </div>
         </div>
+
         <div className="flex mx-20 sm:mx-28 my-8 text-primary">
         <div className="m-4 space-y-5 hidden lg:flex lg:flex-col lg:justify-between">
           <div className="aspect-square overflow-hidden size-[30rem]">
