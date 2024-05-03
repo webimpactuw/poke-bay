@@ -29,7 +29,7 @@ const Home = () => {
       <div>
         <div className='flex flex-col justify-center pt-[5%] pb-[280px]'>
           <div
-            className='flex space-x-6 flex-row justify-center items-center text-[12vw] font-black font-inter'
+            className='flex space-x-3 md:space-x-6 flex-row justify-center items-center text-[12vw] font-black font-inter'
             aria-hidden
           >
             <p className='text-orange-600'>P</p>
