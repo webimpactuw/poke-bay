@@ -27,8 +27,11 @@ const Home = () => {
   return (
     <div className='flex flex-row'>
       <div>
-        <div className='flex flex-col justify-center pt-[5%]'>
-          <div className='flex space-x-6 flex-row justify-center items-center text-[12vw] font-black font-inter'>
+        <div className='flex flex-col justify-center pt-[5%] pb-[280px]'>
+          <div
+            className='flex space-x-6 flex-row justify-center items-center text-[12vw] font-black font-inter'
+            aria-hidden
+          >
             <p className='text-orange-600'>P</p>
             <img className='w-[12vw] h-[12vw]' src={logo}></img>
             <p className='text-green-700'>K</p>
@@ -37,28 +40,30 @@ const Home = () => {
             <p className='text-violet-500'>A</p>
             <p className='text-red-600'>Y</p>
           </div>
+          <h1 className='hidden'>Poke Bay</h1>
           <div className='flex flex-col align-center justify-center text-center'>
-            <div className='text-primary text-xl'>
-              Fresh Poke in the U-District
+            <div className='text-primary text-3xl font-light font-league'>
+              Fresh Poke in the U District
             </div>
           </div>
         </div>
 
-        <div className='home-background'>
-          <div className='text-center text-white pt-[20%] w-5/6 m-auto flex flex-col items-center gap-16'>
-            <h1 className='font-oswald font-semibold text-5xl pt-5'>
+        <div className='bg-primary home-bg mb-[320px]'>
+          <div className='text-center text-white w-5/6 m-auto flex flex-col items-center gap-16'>
+            <h2 className='font-league font-semibold text-5xl pt-5'>
               Featured Bowls
-            </h1>
+            </h2>
             <div className='flex flex-col md:flex-row justify-center items-center md:justify-between'>
               {arrayData.map((item) => (
-                <div key={item.name} className='md:w-[30%] w-1/2'>
+                <div
+                  key={item.name}
+                  className='flex flex-col gap-2 md:w-[30%] w-1/2'
+                >
                   <img className='' src={item.image}></img>
-                  <div className='font-oswald md:font-inter pt-[5%] text-xl'>
+                  <h3 className='font-league text-2xl pt-4 font-semibold'>
                     {item.name}
-                  </div>
-                  <div className='font-oswald md:font-inter font-light pt-[5%] text-md'>
-                    {item.desc}
-                  </div>
+                  </h3>
+                  <p className='font-light text-md'>{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -66,33 +71,37 @@ const Home = () => {
               <Link to='/menu'>View Full Menu</Link>
             </div>
           </div>
+        </div>
 
-          <div className='w-5/6 m-auto pt-[400px] pb-24'>
-            <div className=' text-primary flex flex-row max-md:flex-col justify-between'>
-              <img className='md:w-2/5' src={entrance}></img>
-              <div className='flex flex-col gap-6 max-md:items-center max-md:pt-[4%] md:w-2/5'>
-                <h1 className='text-3xl font-semibold'>Our Mission</h1>
-                <p className='font-lato max-md:w-5/6'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <button className='py-3 px-6 w-fit rounded-full bg-primary text-white'>
-                  <Link to='/about'>View More</Link>
-                </button>
-              </div>
+        <div className='w-5/6 m-auto pb-24'>
+          <div className=' text-primary flex items-center max-md:flex-col justify-between'>
+            <img className='md:w-2/5' src={entrance}></img>
+            <div className='flex flex-col gap-4 max-md:items-center max-md:pt-[4%] md:w-2/5'>
+              <h2 className='font-league text-5xl font-semibold'>
+                Our Mission
+              </h2>
+              <p className='max-md:w-5/6 leading-relaxed'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <button className='mt-4 py-3 px-6 w-fit rounded-full bg-primary text-white'>
+                <Link to='/about'>View More</Link>
+              </button>
             </div>
           </div>
         </div>
         <div className='w-5/6  m-auto'>
           <div className='flex max-md:flex-col flex-row text-primary justify-between items-center'>
-            <div className='flex flex-col md:w-1/2'>
-              <h1 className='text-2xl font-semibold'>Visit Us</h1>
-              <p className='pt-2'>Poke Bay</p>
-              <p>4215 University Way NE</p>
-              <p>Seattle, WA 98105</p>
-              <p className='py-5'>Open every day from 11 AM to 9 PM</p>
+            <div className='flex flex-col gap-4 md:w-1/2'>
+              <h2 className='font-league text-5xl font-semibold'>Visit Us</h2>
+              <div>
+                <p>Poke Bay</p>
+                <p>4215 University Way NE</p>
+                <p>Seattle, WA 98105</p>
+              </div>
+              <p>Open every day from 11 AM to 9 PM</p>
             </div>
             <iframe
               className='md:w-2/5 border-none aspect-[3/2]'

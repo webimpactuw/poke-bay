@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#12748f',
+        primary: '#35728C',
         secondary: '#97C7DC',
         white: '#fffdf8',
       },
@@ -12,7 +12,7 @@ export default {
         lato: ['Lato'],
         oswald: ['Oswald'],
         inter: ['Inter', 'sans-serif'],
-        league: ['League Spartan', 'Spartan', 'sans-serif'],
+        league: ['League Spartan', 'sans-serif'],
       },
       fontSize: {
         nav: ['16px'],

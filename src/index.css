@@ -3,27 +3,36 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Footer Section */
-
+/* Background SVGs */
 .footer {
-  background-image: url('./assets/footerbackground.svg');
+  background-image: url('./assets/footer-bg-mobile.svg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.home-background {
-  background-image: url('./assets/home-bg-mobile.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
+.home-bg::before,
+.home-bg::after {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-bg::before {
+  content: url('./assets/home-bg-top.svg');
+  transform: translateY(-80%);
+  z-index: -1;
+}
+
+.home-bg::after {
+  content: url('./assets/home-bg-bottom.svg');
 }
 
 @media (min-width: 468px) {
-  /* Footer Section Tablet Size */
   .footer {
-    background-image: url('./assets/lgfooterbackground.svg');
+    background-image: url('./assets/footer-bg.svg');
   }
 
-  .home-background {
+  .home-bg {
     background-image: url('./assets/home-bg.svg');
   }
 }
