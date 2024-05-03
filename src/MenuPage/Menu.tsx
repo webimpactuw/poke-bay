@@ -21,7 +21,7 @@ function Menu () {
         <p className="font-oswald font-semibold text-primary text-5xl text-center py-6">Menu</p>
         <div className="home-bg py-28">
           <div className="text-center py-4 bg-primary">
-            <div className="text-white flex flex-col">
+            <div className="text-white flex flex-col px-5">
               <p className="font-oswald my-2 text-3xl font-semibold">Build Your Own Bowl</p>
               <p className="text-s font-light max-w-[55ch] flex place-self-center mx-4 my-2">DISCLAIMER: the build-your-own-bowl section is NOT FOR ORDERING, but simply a simulation of what your bowl could look like.</p>
             </div>
