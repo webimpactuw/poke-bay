@@ -15,7 +15,7 @@ const Menu = () => {
           <p className="text-s font-light max-w-[55ch] flex place-self-center mx-4 my-2">DISCLAIMER: the build-your-own-bowl section is NOT FOR ORDERING, but simply a simulation of what your bowl could look like.</p>
         </div>
         <div className="bg-white py-4 sm:py-10 px-10 sm:px-20 mx-20 my-5 text-primary">
-          <div className="space-x-2 space-y-2 md:text-left">
+          <div className="space-x-2 space-y-2 md:text-left mx-10 md:mx-0">
             <button className="border-[1px] border-primary rounded-2xl px-3 text-lg">Base</button>
             <button className="border-[1px] border-primary rounded-2xl px-3 text-lg">Proteins</button>
             <button className="border-[1px] border-primary rounded-2xl px-3 text-lg">Sides</button>
