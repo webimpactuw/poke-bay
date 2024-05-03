@@ -14,7 +14,7 @@
 .home-bg::after {
   position: absolute;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   z-index: -1;
 }
 
