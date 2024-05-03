@@ -15,7 +15,7 @@ const Menu = () => {
           <p className="text-s font-light max-w-[55ch] flex place-self-center mx-4 my-2">DISCLAIMER: the build-your-own-bowl section is NOT FOR ORDERING, but simply a simulation of what your bowl could look like.</p>
         </div>
         <div className="bg-white py-4 sm:py-10 px-10 sm:px-20 mx-20 my-5 text-primary">
-          <div className="space-x-2 space-y-2 :text-left">
+          <div className="space-x-2 space-y-2 md:text-left">
             <button className="border-[1px] border-primary rounded-2xl px-3 text-lg">Base</button>
             <button className="border-[1px] border-primary rounded-2xl px-3 text-lg">Proteins</button>
             <button className="border-[1px] border-primary rounded-2xl px-3 text-lg">Sides</button>
@@ -37,7 +37,7 @@ const Menu = () => {
         </div>
       </div>
       <div className="flex mx-20 sm:mx-28 my-8 text-primary">
-        <div className="m-4 space-y-5 md:block hidden">
+        <div className="m-4 space-y-5 hidden lg:flex lg:flex-col lg:justify-between">
           <div className="aspect-square overflow-hidden size-[30rem]">
             <img src={MenuImg1} className="object-cover -translate-y-1/3"/>
           </div>
@@ -51,7 +51,7 @@ const Menu = () => {
             <img src={MenuImg4} className="object-cover -translate-y-1/3 scale-105"/>
           </div>
         </div>
-        <div className="my-16 md:mx-14 md:block flex flex-col text-center md:text-left">
+        <div className="my-16 md:mx-14 md:block flex flex-col text-center lg:text-left">
           <div>
             <p className="text-3xl font-oswald font-semibold my-2">Our Signature Bowls</p>
             <p className="text-s">Regular $13.99&emsp;Large $16.99</p>
@@ -72,7 +72,7 @@ const Menu = () => {
               <p className="font-oswald text-xl">Rainbow Bowl</p>
               <p>classic salmon, lettuce, red cabbage, cucumber, sweet onion, edamame, green onion, seaweed salad, masago, japanese dressing, sesame seeds</p>
             </div>
-            <div className="aspect-square overflow-hidden md:hidden size-11/12 self-center">
+            <div className="aspect-square overflow-hidden lg:hidden size-11/12 self-center">
               <img src={MenuImg2} className="object-cover -translate-y-1/3"/>
             </div>
             <div className="space-y-2">
@@ -87,7 +87,7 @@ const Menu = () => {
               <p className="font-oswald text-xl">Veggie Bowl</p>
               <p>classic tuna, spicy tuna, cucumber, red cabbage, edamame, cherry tomato, carrots, seaweed salad, green onion, spicy mayo, sesame seeds, crispy onion</p>
             </div>
-            <div className="aspect-square overflow-hidden md:hidden size-11/12 self-center">
+            <div className="aspect-square overflow-hidden lg:hidden size-11/12 self-center">
               <img src={MenuImg3} className="object-cover -translate-y-1/3"/>
             </div>
             <div className="space-y-2">
@@ -102,7 +102,7 @@ const Menu = () => {
               <p className="font-oswald text-xl">Dancing Catfish Bowl</p>
               <p>classic tuna, spicy tuna, cucumber, red cabbage, edamame, cherry tomato, carrots, seaweed salad, green onion, spicy mayo, sesame seeds, crispy onion</p>
             </div>
-            <div className="aspect-square overflow-hidden md:hidden size-11/12 self-center">
+            <div className="aspect-square overflow-hidden lg:hidden size-11/12 self-center">
               <img src={MenuImg4} className="object-cover -translate-y-1/3"/>
             </div>
           </div>
