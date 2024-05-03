@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom';
-import logo from '../public/img/logo.png';
+import logo from './images/logo.png';
 import { useState, useEffect, useRef, RefObject } from 'react';
 import { LuMenu } from 'react-icons/lu';
 import { CgClose } from 'react-icons/cg';
@@ -29,8 +29,8 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <nav className='fixed w-full z-20 mt-[33px]'>
-      <div className='flex flex-wrap justify-between items-center w-5/6 m-auto'>
+    <nav className='fixed w-full z-20 bg-white  py-[2%]'>
+      <div className='flex flex-wrap justify-between items-center mx-[6%]'>
         <NavLink to='/'>
           <img
             src={logo}
