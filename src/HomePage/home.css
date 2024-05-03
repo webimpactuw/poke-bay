@@ -1,0 +1,21 @@
+:root {
+    background-color: #fffdf8;
+}
+
+.entrance {
+    width: 40vw;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.button {
+    border-radius: 1.5rem;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4vh;
+}
+
+
+
