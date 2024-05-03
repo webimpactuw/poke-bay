@@ -28,7 +28,7 @@ const Home = () => {
     <div className='flex flex-row'>
       <div>
         <div className='flex flex-col justify-center pt-[5%]'>
-          <div className='flex space-x-6 flex-row justify-center items-center text-[12vw] font-black font-inter'>
+          <div className='flex space-x-4 flex-row justify-center items-center text-[12vw] font-black font-inter'>
             <p className='text-orange-600'>P</p>
             <img className='w-[12vw] h-[12vw]' src={logo}></img>
             <p className='text-green-700'>K</p>
