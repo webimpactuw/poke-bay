@@ -1,9 +1,13 @@
+import hero from '../images/hero-img.png';
+import img1 from '../images/about-img-1.png';
+import img2 from '../images/about-img-2.png';
+
 function About() {
   return (
     <>
       <section className='flex justify-center items-center flex-col gap-12 text-primary'>
         <h1 className=' text-5xl md:m-15 font-oswald font-semibold'>About</h1>
-        <img src='/src/images/hero-img.png' alt='' className='w-5/6' />
+        <img src={hero} alt='' className='w-5/6' />
       </section>
 
       <section className='flex flex-col gap-16 py-16 items-center text-primary m-auto'>
@@ -24,7 +28,7 @@ function About() {
             </p>
           </div>
           <img
-            src='/src/images/about-img-1.png'
+            src={img1}
             alt=''
             className='w-screen md:w-3/6 aspect-[3/2] object-cover'
           />
@@ -48,7 +52,7 @@ function About() {
             </p>
           </div>
           <img
-            src='/src/images/about-img-2.png'
+            src={img2}
             alt=''
             className='w-screen md:w-3/6 aspect-[3/2] object-cover object-top'
           />
