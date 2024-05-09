@@ -67,9 +67,12 @@ const Home = () => {
               </div>
             ))}
           </div>
-          <div className='mt-10 md:mt-0 py-3 px-6 w-fit rounded-full text-primary bg-white'>
-            <Link to='/menu'>View Full Menu</Link>
-          </div>
+          <Link
+            to='/menu'
+            className='mt-10 md:mt-0 py-3 px-6 w-fit rounded-full text-white border border-white/90 hover:bg-white/20 transition duration-300 ease-in-out'
+          >
+            View Full Menu
+          </Link>
         </div>
       </div>
 
@@ -86,9 +89,12 @@ const Home = () => {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-            <button className='mt-4 py-3 px-6 w-fit rounded-full bg-primary text-white'>
-              <Link to='/about'>View More</Link>
-            </button>
+            <Link
+              to='/about'
+              className='mt-4 py-3 px-6 w-fit rounded-full bg-primary text-white hover:bg-primary-dark transition duration-300 ease-in-out'
+            >
+              View More
+            </Link>
           </div>
         </div>
       </div>
