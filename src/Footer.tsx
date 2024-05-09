@@ -13,7 +13,7 @@ const Footer = () => {
           <div className='font-light'>
             <p>4215 University Way NE</p>
             <p className='mb-2'> Seattle, WA 98105</p>
-            <p className='mb-2'>(626) 715-8907</p>
+            <p className='mb-2'>(425) 550-5086</p>
             <p>pokebay.info@gmail.com</p>
           </div>
         </div>
