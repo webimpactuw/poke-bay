@@ -1,10 +1,10 @@
 import './home.css';
-import entrance from '../images/entrance.jpg';
 import { Link } from 'react-router-dom';
 import bowl1 from '../images/bowl-big-kahuna.png';
 import bowl2 from '../images/bowl-rainbow.png';
 import bowl3 from '../images/bowl-salmon-style.png';
 import logo from '../images/logo.png';
+import counter from '../images/counter.jpg';
 
 const Home = () => {
   const arrayData = [
@@ -67,34 +67,38 @@ const Home = () => {
               </div>
             ))}
           </div>
-          <div className='mt-10 md:mt-0 py-3 px-6 w-fit rounded-full text-primary bg-white'>
-            <Link to='/menu'>View Full Menu</Link>
-          </div>
+          <Link
+            to='/menu'
+            className='mt-10 md:mt-0 py-3 px-6 w-fit rounded-full text-white border border-white/90 hover:bg-white/20 transition duration-300 ease-in-out'
+          >
+            View Full Menu
+          </Link>
         </div>
       </div>
 
       <div className='w-5/6 m-auto pb-24'>
         <div className=' text-primary flex items-center max-md:flex-col max-md:gap-12 justify-between'>
-          <img className='md:w-2/5' src={entrance}></img>
-          <div className='flex flex-col gap-4 max-md:items-center md:w-2/5'>
+          <img className='md:w-2/5' src={counter} alt=''></img>
+          <div className='flex flex-col gap-2 max-md:items-center md:w-2/5'>
             <h2 className='font-league text-3xl md:text-5xl font-semibold'>
               Our Mission
             </h2>
             <p className='max-md:text-center leading-relaxed'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              To cultivate a healthier lifestyle through our fresh, flavorful,
+              and nutritious poke bowls.
             </p>
-            <button className='mt-4 py-3 px-6 w-fit rounded-full bg-primary text-white'>
-              <Link to='/about'>View More</Link>
-            </button>
+            <Link
+              to='/about'
+              className='mt-4 py-3 px-6 w-fit rounded-full bg-primary text-white hover:bg-primary-dark transition duration-300 ease-in-out'
+            >
+              View More
+            </Link>
           </div>
         </div>
       </div>
       <div className='w-5/6 m-auto max-lg:pb-12'>
         <div className='flex max-md:flex-col-reverse max-md:gap-12 text-primary justify-between items-center'>
-          <div className='flex flex-col gap-4 md:w-1/2 max-md:text-center'>
+          <div className='flex flex-col gap-2 md:w-1/2 max-md:text-center'>
             <h2 className='font-league text-3xl md:text-5xl font-semibold'>
               Visit Us
             </h2>

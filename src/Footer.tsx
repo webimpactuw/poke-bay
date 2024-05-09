@@ -7,13 +7,13 @@ const Footer = () => {
     <footer className='footer pt-24 pb-10 md:pb-20 md:pt-40 text-white w-screen'>
       <div className='flex flex-col md:flex-row md:justify-between w-5/6 m-auto'>
         <div className='footerText mb-3 md:text-md'>
-          <p className='text-2xl md:text-4xl md:pt-10 my-8 font-bold'>
+          <p className='text-2xl md:text-4xl md:pt-10 mt-8 mb-4 font-semibold font-league'>
             Poke Bay
           </p>
           <div className='font-light'>
             <p>4215 University Way NE</p>
             <p className='mb-2'> Seattle, WA 98105</p>
-            <p className='mb-2'>(626) 715-8907</p>
+            <p className='mb-2'>(425) 550-5086</p>
             <p>pokebay.info@gmail.com</p>
           </div>
         </div>
