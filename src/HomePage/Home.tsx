@@ -1,4 +1,3 @@
-import './home.css';
 import { Link } from 'react-router-dom';
 import bowl1 from '../images/bowl-big-kahuna.png';
 import bowl2 from '../images/bowl-rainbow.png';

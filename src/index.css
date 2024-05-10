@@ -3,6 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  overflow-x: hidden;
+}
+
+:root {
+  @apply bg-white;
+}
+
 /* Background SVGs */
 .footer {
   background-image: url('./assets/footer-bg-mobile.svg');
