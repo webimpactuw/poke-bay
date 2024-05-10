@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom';
-import logo from '../public/img/logo.png';
+import logo from './images/logo.png';
 import { useState, useEffect, useRef, RefObject } from 'react';
 import { LuMenu } from 'react-icons/lu';
 import { CgClose } from 'react-icons/cg';
@@ -29,7 +29,7 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <nav className='fixed w-full z-20 mt-[33px]'>
+    <nav className='fixed w-full bg-white py-[2%] z-10'>
       <div className='flex flex-wrap justify-between items-center mx-[6%]'>
         <NavLink to='/'>
           <img
@@ -46,7 +46,7 @@ const Navbar = () => {
           <div
             ref={sidebarRef}
             className={`flex flex-col top-0 right-0 w-2/3 bg-primary p-10 text-white text-2xl fixed h-full ease-in-out duration-500 ${
-              isSideBarOpen ? 'translate-x-0' : 'translate-x-full'
+              isSideBarOpen ? 'sidebar-open translate-x-0' : 'translate-x-full'
             }`}
           >
             <div className='flex right-0 justify-end mb-8'>
@@ -66,6 +66,7 @@ const Navbar = () => {
                       ? 'underline font-bold'
                       : 'font-normal'
                   }
+                  onClick={() => setIsSideBarOpen((prev) => !prev)}
                 >
                   Home
                 </NavLink>
@@ -78,6 +79,7 @@ const Navbar = () => {
                       ? 'underline font-bold'
                       : 'font-normal'
                   }
+                  onClick={() => setIsSideBarOpen((prev) => !prev)}
                 >
                   About
                 </NavLink>
@@ -90,6 +92,7 @@ const Navbar = () => {
                       ? 'underline font-bold'
                       : 'font-normal'
                   }
+                  onClick={() => setIsSideBarOpen((prev) => !prev)}
                 >
                   Menu
                 </NavLink>
