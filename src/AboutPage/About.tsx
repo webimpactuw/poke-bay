@@ -5,7 +5,7 @@ function About() {
   return (
     <>
       <section className='pt-8 md:pt-14 flex justify-center items-center flex-col gap-8 text-primary'>
-        <h1 className=' font-league font-semibold text-5xl md:text-7xl'>
+        <h1 className='font-league font-semibold text-5xl md:text-7xl'>
           About
         </h1>
         <img
