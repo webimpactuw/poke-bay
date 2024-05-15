@@ -1,6 +1,6 @@
 export default {
-	name: "Document",
-	title: "Document",
+	name: "bowls",
+	title: "Menu Bowls",
 	type: 'document',
 	fields: [
         {
@@ -9,5 +9,11 @@ export default {
             type: "string",
             validation: (Rule: any) => (Rule).required()
         },
+        {
+            name: 'description',
+            title: 'Description',
+            type: 'string',
+            validation: (Rule: any) => (Rule).required()
+        }
     ],
 }

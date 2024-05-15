@@ -1,4 +1,5 @@
-import doc from './documents/doc'
-import photo from './documents/photo'
+import featured from './documents/homeFeatured'
+import bowls from './documents/bowls'
+import menuImg from './documents/menuImg'
 
-export const schemaTypes = [doc, photo]
+export const schemaTypes = [featured, bowls, menuImg]
