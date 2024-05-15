@@ -7,8 +7,8 @@ function Step({
 }) {
   return (
     <div>
-      <p className='font-oswald font-semibold pb-4 text-2xl'>{header}</p>
-      <ul>
+      <p className='font-league font-semibold pb-4 text-2xl'>{header}</p>
+      <ul className='flex flex-col gap-2'>
         {ingredients.map((food, index) => (
           <li key={index}>{food}</li>
         ))}
