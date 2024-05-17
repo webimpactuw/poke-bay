@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import Step from './Step';
 
-import BaseImage from '../images/choose-bowl-base.jpeg';
+import BuildImage from '../images/menu-build.jpeg';
 import MenuImg1 from '../images/menu-bowl-1.jpeg';
 import MenuImg2 from '../images/menu-bowl-2.jpeg';
 import MenuImg3 from '../images/menu-bowl-3.jpeg';
@@ -192,7 +192,7 @@ function Menu() {
                 />
               </div>
               <img
-                src={BaseImage}
+                src={BuildImage}
                 className='size-44 md:size-64 md:m-10 place-self-center object-cover translate-y-7 aspect-square rounded-full w-full h-auto'
               />
             </div>
