@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import Step from './Step';
 
-import BuildImage from '../images/menu-build.jpeg';
+import BuildImage from '../images/menu-build.png';
 import MenuImg1 from '../images/menu-bowl-1.jpeg';
 import MenuImg2 from '../images/menu-bowl-2.jpeg';
 import MenuImg3 from '../images/menu-bowl-3.jpeg';
