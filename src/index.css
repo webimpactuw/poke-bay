@@ -3,9 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+/* * {
   overflow-x: hidden;
-}
+} */
 
 :root {
   @apply bg-white;

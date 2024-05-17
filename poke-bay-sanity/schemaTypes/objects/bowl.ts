@@ -1,6 +1,6 @@
 export default {
-  name: 'menuItems',
-  title: 'Menu Items',
+  name: 'bowl',
+  title: 'Bowl',
   type: 'object',
   fields: [
     {
@@ -10,8 +10,8 @@ export default {
       validation: (Rule: any) => Rule.required(),
     },
     {
-      name: 'price',
-      title: 'Price',
+      name: 'description',
+      title: 'Description',
       type: 'string',
       validation: (Rule: any) => Rule.required(),
     },

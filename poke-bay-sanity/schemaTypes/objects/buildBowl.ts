@@ -6,31 +6,31 @@ export default {
     {
       name: 'base',
       title: 'Base',
-      type: 'text',
+      type: 'step',
       validation: (Rule: any) => Rule.required(),
     },
     {
       name: 'proteins',
       title: 'Proteins',
-      type: 'text',
+      type: 'step',
       validation: (Rule: any) => Rule.required(),
     },
     {
       name: 'sides',
       title: 'Sides',
-      type: 'text',
+      type: 'step',
       validation: (Rule: any) => Rule.required(),
     },
     {
       name: 'sauce',
       title: 'Sauce',
-      type: 'text',
+      type: 'step',
       validation: (Rule: any) => Rule.required(),
     },
     {
       name: 'toppings',
       title: 'Toppings',
-      type: 'text',
+      type: 'step',
       validation: (Rule: any) => Rule.required(),
     },
     {

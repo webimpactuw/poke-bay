@@ -30,7 +30,7 @@ export default {
       type: 'array',
       of: [
         {
-          type: 'bowls',
+          type: 'bowl',
         },
       ],
       validation: (Rule: any) => Rule.required(),
@@ -42,7 +42,7 @@ export default {
       type: 'array',
       of: [
         {
-          type: 'menuItems',
+          type: 'menuItem',
         },
       ],
       group: 'sideDishes',
@@ -53,7 +53,7 @@ export default {
       type: 'array',
       of: [
         {
-          type: 'menuItems',
+          type: 'menuItem',
         },
       ],
       group: 'pokeByThePound',
