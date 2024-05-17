@@ -1,5 +1,10 @@
-import featured from './documents/homeFeatured'
-import bowls from './documents/bowls'
-import menuImg from './documents/menuImg'
+import featured from './objects/homeFeatured'
+import bowls from './objects/bowls'
+import buildBowl from './objects/buildBowl'
+import menuImages from './objects/menuImages'
+import bowlPrices from './objects/bowlPrices'
+import menuItems from './objects/menuItems'
 
-export const schemaTypes = [featured, bowls, menuImg]
+import menu from './documents/menu'
+
+export const schemaTypes = [featured, bowls, buildBowl, menuImages, bowlPrices, menuItems, menu]
