@@ -92,42 +92,42 @@ function Menu() {
     {
       name: 'Tuna Lover Bowl',
       description:
-        'classic tuna, spicy tuna,cucumber, red cabbage, edamame, cherry tomato, carrots, seaweed salad, green onion, spicy mayo, sesame seeds, crispy onion',
+        'classic tuna, spicy tuna, cucumber, red cabbage, edamame, cherry tomato, carrots, seaweed salad, green onion, spicy mayo, sesame seeds, crispy onion',
     },
     {
       name: 'Rainbow Bowl',
       description:
-        'classic salmon, lettuce, red cabbage, cucumber, sweet onion, edamame, green onion, seaweed salad, masago, japanese dressing, sesame seeds',
+        'classic tuna, classic salmon, crab salad, cucumber, carrots, lettuce, pickled ginger, masago, mango, green onion, citrus ponzu, spicy mayo, furikake',
     },
     {
       name: 'Big Kahuna Bowl',
       description:
-        'classic tuna, spicy tuna, cucumber, red cabbage, edamame, cherry tomato, carrots, seaweed salad, green onion, spicy mayo, sesame seeds, crispy onion',
+        'hawaiian salmon, hawaiian tuna, crab salad, cucumber, carrots, edamame, sweet onion, mango, sweet corn, seaweed salad, japanese dressing, crispy onion',
     },
     {
       name: 'Volcano Bowl',
       description:
-        'classic salmon, lettuce, red cabbage, cucumber, sweet onion, edamame, green onion, seaweed salad, masago, japanese dressing, sesame seeds',
+        'spicy salmon, spicy tuna, spicy crab salad, cucumber, jalapenos, cherry tomato, sweet onion, carrots, pickled ginger, spicy mayo, sriracha, crispy onion',
     },
     {
       name: 'Veggie Bowl',
       description:
-        'classic tuna, spicy tuna, cucumber, red cabbage, edamame, cherry tomato, carrots, seaweed salad, green onion, spicy mayo, sesame seeds, crispy onion',
+        'organic tofu, cucumber, sweet onion, sweet corn, carrots, lettuce, red cabbage, edamame, cherry tomato, seaweed salad, citrus ponzu, furikake',
     },
     {
       name: 'Tempura Shrimp Bowl',
       description:
-        'classic tuna, spicy tuna, cucumber, red cabbage, edamame, cherry tomato, carrots, seaweed salad, green onion, spicy mayo, sesame seeds, crispy onion',
+        '4 pieces of tempura shrimp, avocado, cucumber, red cabbage, carrots, radish, seaweed salad, green onion, eel sauce, spicy mayo, tempura crunchy',
     },
     {
       name: 'California Dreaming Bowl',
       description:
-        'classic tuna, spicy tuna, cucumber, red cabbage, edamame, cherry tomato, carrots, seaweed salad, green onion, spicy mayo, sesame seeds, crispy onion',
+        'crab salad, avocado, cucumber, edamame, seaweed salad, lettuce, green onion, masago, spicy mayo, sesame seeds',
     },
     {
       name: 'Dancing Catfish Bowl',
       description:
-        'classic tuna, spicy tuna, cucumber, red cabbage, edamame, cherry tomato, carrots, seaweed salad, green onion, spicy mayo, sesame seeds, crispy onion',
+        'torched crawfish, crab salad, avocado, cucumber, carrots, sweet corn, red onion, green onion, masago, spicy mayo, eel sauce, sesame seeds, crispy onion',
     },
   ];
 
@@ -152,22 +152,23 @@ function Menu() {
 
   return (
     <div>
-      <h1 className='font-league font-semibold text-5xl md:text-7xl text-primary text-center py-6'>
+      <h1 className='font-league font-semibold text-5xl md:text-7xl text-primary text-center pt-8 md:pt-14'>
         Menu
       </h1>
-      <div className='home-bg py-24 md:py-32 lg:py-56'>
+      <div className='home-bg py-24 md:py-32 lg:py-48'>
         <div className='text-center py-4 bg-primary'>
-          <div className='text-white flex flex-col px-5'>
+          <div className='text-white flex flex-col gap-4 mb-8'>
             <h2 className='font-league text-3xl md:text-5xl font-semibold'>
               Build Your Own Bowl
             </h2>
-            <p className='text-s font-light max-w-[55ch] flex place-self-center mx-4 my-2'>
-              DISCLAIMER: the build-your-own-bowl section is NOT FOR ORDERING,
-              but simply a simulation of what your bowl could look like.
+            <p className='text-center font-light max-md:w-5/6 md:max-w-lg mx-auto'>
+              <span className='font-medium'>DISCLAIMER:</span> the
+              build-your-own-bowl section is NOT FOR ORDERING, but simply a
+              simulation of what your bowl could look like.
             </p>
           </div>
-          <div className='bg-white py-4 sm:py-10 px-10 sm:px-20 mx-20 my-5 text-primary'>
-            <div className='space-x-2 space-y-2 :text-left'>
+          <div className='bg-white p-8 sm:p-16 w-5/6 m-auto text-primary'>
+            <div className='flex flex-wrap max-md:justify-center gap-2'>
               {categories.map(({ name }, index) => (
                 <button
                   className={`${
@@ -182,27 +183,25 @@ function Menu() {
                 </button>
               ))}
             </div>
-            <div className='flex flex-col sm:flex-row justify-between'>
-              <div className='text-left sm:space-y-4 space-y-3 my-5 mt-16 sm:my-16 order-last sm:order-first'>
+            <div className='flex flex-col md:flex-row justify-between gap-12'>
+              <div className='text-left md:space-y-4 space-y-3 mt-8 md:mt-16 order-last md:order-first'>
                 <Step
                   {...categories.find(
                     (category) => category.name === selected
                   )!}
                 />
               </div>
-              <div className='sm:size-64 size-44 sm:m-10 place-self-center'>
-                <img
-                  src={BaseImage}
-                  className='object-cover translate-y-7 aspect-square rounded-full w-full h-auto'
-                />
-              </div>
+              <img
+                src={BaseImage}
+                className='size-44 md:size-64 md:m-10 place-self-center object-cover translate-y-7 aspect-square rounded-full w-full h-auto'
+              />
             </div>
           </div>
         </div>
       </div>
 
-      <div className='flex mx-20 sm:mx-28 my-8 text-primary'>
-        <div className='m-4 space-y-5 hidden lg:flex lg:flex-col lg:justify-between'>
+      <div className='flex w-5/6 m-auto my-8 text-primary'>
+        <div className='space-y-5 hidden lg:flex lg:flex-col lg:justify-between'>
           {images.map((image, index) => (
             <div
               className='aspect-square overflow-hidden size-[30rem]'
@@ -212,16 +211,16 @@ function Menu() {
             </div>
           ))}
         </div>
-        <div className='my-16 md:mx-14 md:block flex flex-col text-center lg:text-left'>
+        <div className='my-16 md:mx-16 md:block flex flex-col text-center lg:text-left'>
           <div>
             <h2 className='font-league text-3xl md:text-5xl font-semibold mb-2'>
               Our Signature Bowls
             </h2>
             <p className='text-s'>Regular $13.99&emsp;Large $16.99</p>
           </div>
-          <div className='space-y-10 my-10 flex flex-col'>
+          <div className='space-y-8 my-8 flex flex-col'>
             {bowls.map((bowl, index) => (
-              <div key={index} className='space-y-2'>
+              <div key={index}>
                 <p className='font-league font-semibold text-xl'>{bowl.name}</p>
                 <p>{bowl.description}</p>
               </div>
@@ -236,9 +235,9 @@ function Menu() {
             ))}
           </div>
           <div className='space-y-5 my-10'>
-            <p className='font-league text-2xl font-semibold my-6'>
+            <h2 className='font-league text-3xl md:text-5xl font-semibold mb-2'>
               Side Dishes
-            </p>
+            </h2>
             {sides.map((side, index) => (
               <div className='flex justify-between' key={index}>
                 <p>{side.name}</p>
@@ -247,9 +246,9 @@ function Menu() {
             ))}
           </div>
           <div className='space-y-5 my-10'>
-            <p className='font-league text-2xl font-semibold my-6'>
+            <h2 className='font-league text-3xl md:text-5xl font-semibold mb-2'>
               Poke by the Pound
-            </p>
+            </h2>
             {pokeByThePound.map((item, index) => (
               <div className='flex justify-between' key={index}>
                 <p>{item.name}</p>
