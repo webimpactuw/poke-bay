@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createHashRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, Navigate, RouterProvider } from 'react-router-dom';
 
 import './index.css';
 import About from './AboutPage/About.tsx';
 import Menu from './MenuPage/Menu.tsx';
 import Home from './HomePage/Home.tsx';
 import Root from './Root.tsx';
-import Error from './Error.tsx';
 
 const router = createHashRouter([
   {
@@ -28,7 +27,7 @@ const router = createHashRouter([
       },
       {
         path: '*',
-        element: <Error />,
+        element: <Navigate to='/' replace />,
       },
     ],
   },
