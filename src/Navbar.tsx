@@ -24,10 +24,6 @@ const Navbar = () => {
     };
   }, [sidebarRef]);
 
-  useEffect(() => {
-    console.log(location.pathname);
-  }, [location]);
-
   return (
     <nav className='fixed w-full bg-white py-[2%] z-10'>
       <div className='flex flex-wrap justify-between items-center mx-[6%]'>

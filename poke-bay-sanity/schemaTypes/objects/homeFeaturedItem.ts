@@ -1,5 +1,5 @@
 export default {
-  name: 'HomeImages',
+  name: 'homeFeaturedItem',
   title: 'Featured Items on Home Page',
   type: 'object',
   fields: [
@@ -11,7 +11,7 @@ export default {
     },
     {
       name: 'image',
-      title: 'image',
+      title: 'Image',
       type: 'image',
       options: {
         hotspot: true,

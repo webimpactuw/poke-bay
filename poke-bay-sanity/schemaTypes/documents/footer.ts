@@ -1,5 +1,5 @@
 export default {
-  name: 'footerLinks',
+  name: 'footer',
   title: 'Footer Links & Content',
   type: 'document',
   fields: [

@@ -1,4 +1,4 @@
-import featured from './objects/homeFeatured'
+import homeFeaturedItem from './objects/homeFeaturedItem'
 import bowl from './objects/bowl'
 import buildBowl from './objects/buildBowl'
 import step from './objects/step'
@@ -7,15 +7,15 @@ import bowlPrices from './objects/bowlPrices'
 import menuItem from './objects/menuItem'
 
 import about from './documents/about'
-import footerLinks from './documents/footerLinks'
-import homeContent from './documents/homeContent'
+import footer from './documents/footer'
 import menu from './documents/menu'
+import home from './documents/home'
 
 export const schemaTypes = [
-  featured,
+  homeFeaturedItem,
   about,
-  footerLinks,
-  homeContent,
+  footer,
+  home,
   bowl,
   buildBowl,
   step,
