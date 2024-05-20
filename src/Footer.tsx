@@ -1,8 +1,32 @@
+import { useState, useEffect } from 'react';
+
+import sanityClient from './client.tsx';
 import { FacebookIcon } from './icons/Socialicons';
 import { InstagramIcon } from './icons/Socialicons';
 import { YelpIcon } from './icons/Socialicons';
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [instagram, setInstagram] = useState('');
+  const [facebook, setFacebook] = useState('');
+  const [yelp, setYelp] = useState('');
+
+  useEffect(() => {
+    const getData = async () => {
+      const query = `*[_type=='footer'][0]`;
+      const { email, phoneNumber, instagram, facebook, yelp } =
+        await sanityClient.fetch(query);
+      setEmail(email);
+      setPhoneNumber(phoneNumber);
+      setInstagram(instagram);
+      setFacebook(facebook);
+      setYelp(yelp);
+    };
+
+    getData();
+  }, []);
+
   return (
     <footer className='footer pt-24 pb-10 md:pb-20 md:pt-40 text-white w-screen'>
       <div className='flex flex-col md:flex-row md:justify-between w-5/6 m-auto'>
@@ -13,15 +37,15 @@ const Footer = () => {
           <div className='font-light'>
             <p>4215 University Way NE</p>
             <p className='mb-2'> Seattle, WA 98105</p>
-            <p className='mb-2'>(425) 550-5086</p>
-            <p>pokebay.info@gmail.com</p>
+            <p className='mb-2'>{phoneNumber}</p>
+            <p>{email}</p>
           </div>
         </div>
         <div className='md:mt-auto'>
           <div className='socialLinks md:justify-end mt-10 pl-1 flex pb-3'>
             <a
               className='group mr-5'
-              href='https://www.instagram.com/pokebay_udistrict/'
+              href={instagram}
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -29,7 +53,7 @@ const Footer = () => {
             </a>
             <a
               className='group mr-5'
-              href=''
+              href={facebook}
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -37,7 +61,7 @@ const Footer = () => {
             </a>
             <a
               className='group'
-              href='https://www.yelp.com/biz/poke-bay-seattle'
+              href={yelp}
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -46,8 +70,8 @@ const Footer = () => {
           </div>
 
           <div className='copyright font-light md:text-right md:mt-4'>
-            <p className='leading-4 text-sm'>
-              {`&#169; ${new Date().getFullYear()} POKE BAY, ALL RIGHTS RESERVED`}
+            <p className='leading-4 text-sm uppercase'>
+              {`&#169; ${new Date().getFullYear()} Poke Bay, All Rights Reserved`}
             </p>
           </div>
         </div>

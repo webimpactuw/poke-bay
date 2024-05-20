@@ -10,7 +10,7 @@ export default {
       validation: (Rule: any) => Rule.required(),
     },
     {
-      name: 'phoneNum',
+      name: 'phoneNumber',
       title: 'Contact Phone Number',
       type: 'string',
       validation: (Rule: any) => Rule.required(),
@@ -34,4 +34,12 @@ export default {
       validation: (Rule: any) => Rule.required(),
     },
   ],
+  preview: {
+    // Hardcode document name
+    prepare() {
+      return {
+        title: 'Footer',
+      }
+    },
+  },
 }
