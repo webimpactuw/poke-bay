@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import imageUrlBuilder from '@sanity/image-url';
 
 import sanityClient from '../client.tsx';
+import { loadImage } from '../lib/loadImage.ts';
 import Step from './Step';
 
 type Category = {
@@ -35,12 +35,6 @@ function Menu() {
   const [sides, setSides] = useState<MenuItem[]>([]);
   const [pokeByThePound, setPokeByThePound] = useState<MenuItem[]>([]);
   const [images, setImages] = useState<string[]>([]);
-
-  // For loading images
-  const builder = imageUrlBuilder(sanityClient);
-  function urlFor(source: string) {
-    return builder.image(source);
-  }
 
   useEffect(() => {
     const getData = async () => {
@@ -146,7 +140,7 @@ function Menu() {
                   />
                 </div>
                 <img
-                  src={urlFor(buildImg).url()}
+                  src={loadImage(buildImg)}
                   className='max-w-xs size-44 md:size-64 md:m-10 place-self-center object-cover translate-y-7 aspect-square rounded-full w-full h-auto'
                 />
               </div>
@@ -163,7 +157,7 @@ function Menu() {
               key={index}
             >
               <img
-                src={urlFor(img).url()}
+                src={loadImage(img)}
                 className='object-cover -translate-y-1/3'
               />
             </div>
@@ -193,7 +187,7 @@ function Menu() {
                 key={index}
               >
                 <img
-                  src={urlFor(img).url()}
+                  src={loadImage(img)}
                   className='object-cover -translate-y-1/3'
                 />
               </div>
