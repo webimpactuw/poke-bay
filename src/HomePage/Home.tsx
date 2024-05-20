@@ -27,9 +27,7 @@ const Home = () => {
   useEffect(() => {
     const getData = async () => {
       const query = `*[_type=='home'][0]`;
-      const data = await sanityClient.fetch(query);
-      console.log(data);
-      const { featuredBowls, mission, visit } = data;
+      const { featuredBowls, mission, visit } = await sanityClient.fetch(query);
       setFeaturedBowls(featuredBowls);
       setMission(mission);
       setHours(visit.hours);
