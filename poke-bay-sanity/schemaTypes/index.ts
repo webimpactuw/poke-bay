@@ -6,21 +6,21 @@ import menuImages from './objects/menuImages'
 import bowlPrices from './objects/bowlPrices'
 import menuItem from './objects/menuItem'
 
-import about from './documents/about'
-import footer from './documents/footer'
-import menu from './documents/menu'
 import home from './documents/home'
+import about from './documents/about'
+import menu from './documents/menu'
+import footer from './documents/footer'
 
 export const schemaTypes = [
   featuredBowl,
-  about,
-  footer,
-  home,
   bowl,
   buildBowl,
   step,
   menuImages,
   bowlPrices,
   menuItem,
+  home,
+  about,
   menu,
+  footer,
 ]
