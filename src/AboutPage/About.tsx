@@ -37,12 +37,15 @@ function About() {
         <h1 className='font-league font-semibold text-5xl md:text-7xl'>
           About
         </h1>
-        {header && (
+        {header ? (
           <img
             src={loadImage(header.img)}
             alt=''
             className='w-5/6 aspect-video object-cover'
           />
+        ) : (
+          // Handle cumulative layout shift
+          <div className='w-5/6 aspect-video '></div>
         )}
       </section>
 

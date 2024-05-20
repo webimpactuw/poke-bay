@@ -102,52 +102,52 @@ function Menu() {
       <h1 className='font-league font-semibold text-5xl md:text-7xl text-primary text-center pt-8 md:pt-14'>
         Menu
       </h1>
-      {categories.length > 0 && buildImg && (
-        <div className='home-bg py-24 md:py-32 lg:py-48'>
-          <div className='text-center py-4 bg-primary'>
-            <div className='text-white flex flex-col gap-4 mb-8'>
-              <h2 className='font-league text-3xl md:text-5xl font-semibold'>
-                Build Your Own Bowl
-              </h2>
-              <p className='text-center font-light max-md:w-5/6 md:max-w-lg mx-auto'>
-                <span className='font-medium'>DISCLAIMER:</span> the
-                build-your-own-bowl section is NOT FOR ORDERING, but simply a
-                simulation of what your bowl could look like.
-              </p>
+      <div className='home-bg py-24 md:py-32 lg:py-48'>
+        <div className='text-center py-4 bg-primary'>
+          <div className='text-white flex flex-col gap-4 mb-8'>
+            <h2 className='font-league text-3xl md:text-5xl font-semibold'>
+              Build Your Own Bowl
+            </h2>
+            <p className='text-center font-light max-md:w-5/6 md:max-w-lg mx-auto'>
+              <span className='font-medium'>DISCLAIMER:</span> the
+              build-your-own-bowl section is NOT FOR ORDERING, but simply a
+              simulation of what your bowl could look like.
+            </p>
+          </div>
+          <div className='bg-white p-8 sm:p-16 w-5/6 m-auto text-primary'>
+            <div className='flex flex-wrap max-md:justify-center gap-2'>
+              {categories.map(({ name }, index) => (
+                <button
+                  className={`${
+                    name === selected
+                      ? 'bg-primary text-white hover:bg-primary-dark'
+                      : 'border-primary hover:bg-primary/20'
+                  } border rounded-2xl px-3 text-lg transition duration-300 ease-in-out capitalize`}
+                  key={index}
+                  onClick={() => setSelected(name)}
+                >
+                  {name}
+                </button>
+              ))}
             </div>
-            <div className='bg-white p-8 sm:p-16 w-5/6 m-auto text-primary'>
-              <div className='flex flex-wrap max-md:justify-center gap-2'>
-                {categories.map(({ name }, index) => (
-                  <button
-                    className={`${
-                      name === selected
-                        ? 'bg-primary text-white hover:bg-primary-dark'
-                        : 'border-primary hover:bg-primary/20'
-                    } border rounded-2xl px-3 text-lg transition duration-300 ease-in-out capitalize`}
-                    key={index}
-                    onClick={() => setSelected(name)}
-                  >
-                    {name}
-                  </button>
-                ))}
+            <div className='flex flex-col md:flex-row justify-between gap-12 max-md:mt-4'>
+              <div className='text-left md:space-y-4 space-y-3 mt-4 md:mt-16 order-last md:order-first'>
+                <Step
+                  {...categories.find(
+                    (category) => category.name === selected
+                  )!}
+                />
               </div>
-              <div className='flex flex-col md:flex-row justify-between gap-12 max-md:mt-4'>
-                <div className='text-left md:space-y-4 space-y-3 mt-4 md:mt-16 order-last md:order-first'>
-                  <Step
-                    {...categories.find(
-                      (category) => category.name === selected
-                    )!}
-                  />
-                </div>
+              {buildImg && (
                 <img
                   src={loadImage(buildImg)}
                   className='max-w-xs size-44 md:size-64 md:m-10 place-self-center object-cover translate-y-7 aspect-square rounded-full w-full h-auto'
                 />
-              </div>
+              )}
             </div>
           </div>
         </div>
-      )}
+      </div>
 
       <div className='flex w-5/6 m-auto my-8 text-primary'>
         <div className='space-y-5 hidden lg:flex lg:flex-col lg:justify-between'>
