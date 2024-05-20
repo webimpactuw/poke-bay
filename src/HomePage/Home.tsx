@@ -5,7 +5,7 @@ import { PortableText } from '@portabletext/react';
 import sanityClient from '../client.tsx';
 import { loadImage } from '../lib/loadImage.ts';
 import { components } from '../lib/portableText.tsx';
-import logo from '../images/logo.png';
+import logo from '../assets/logo.png';
 
 type Bowl = {
   name: string;

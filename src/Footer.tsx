@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 
 import sanityClient from './client.tsx';
-import { FacebookIcon } from './icons/Socialicons';
-import { InstagramIcon } from './icons/Socialicons';
-import { YelpIcon } from './icons/Socialicons';
+import { FacebookIcon } from './assets/SocialIcons.tsx';
+import { InstagramIcon } from './assets/SocialIcons.tsx';
+import { YelpIcon } from './assets/SocialIcons.tsx';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
