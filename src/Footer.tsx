@@ -47,7 +47,7 @@ const Footer = () => {
 
           <div className='copyright font-light md:text-right md:mt-4'>
             <p className='leading-4 text-sm'>
-              &#169; 2024 POKE BAY, ALL RIGHTS RESERVED
+              {`&#169; ${new Date().getFullYear()} POKE BAY, ALL RIGHTS RESERVED`}
             </p>
           </div>
         </div>

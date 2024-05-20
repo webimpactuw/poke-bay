@@ -1,28 +1,43 @@
 import { Link } from 'react-router-dom';
-import bowl1 from '../images/bowl-big-kahuna.png';
-import bowl2 from '../images/bowl-rainbow.png';
-import bowl3 from '../images/bowl-salmon-style.png';
+import { useState, useEffect } from 'react';
+import { PortableText } from '@portabletext/react';
+
+import sanityClient from '../client.tsx';
+import { loadImage } from '../lib/loadImage.ts';
+import { components } from '../lib/portableText.tsx';
 import logo from '../images/logo.png';
-import counter from '../images/counter.jpg';
+
+type Bowl = {
+  name: string;
+  description: string;
+  img: string;
+};
+
+type Mission = {
+  heading: string;
+  body: string;
+  img: string;
+};
 
 const Home = () => {
-  const arrayData = [
-    {
-      name: 'Big Kahuna Bowl',
-      image: bowl1,
-      desc: 'classic salmon, lettuce, red cabbage, cucumber, sweet onion, edamame, green onion, seaweed salad, masago, japanese dressing, sesame seeds',
-    },
-    {
-      name: 'Rainbow Bowl',
-      image: bowl2,
-      desc: 'classic tuna, classic salmon, crab salad, cucumber, carrots, lettuce, pickled ginger, masago, mango, green onion, citrus ponzu, spicy mayo, furikake',
-    },
-    {
-      name: 'Salmon Style Bowl',
-      image: bowl3,
-      desc: 'classic salmon, lettuce, red cabbage, cucumber, sweet onion, edamame, green onion, seaweed salad, masago, japanese dressing, sesame seeds',
-    },
-  ];
+  const [featuredBowls, setFeaturedBowls] = useState<Bowl[]>([]);
+  const [mission, setMission] = useState<Mission>();
+  const [hours, setHours] = useState<[]>([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const query = `*[_type=='home'][0]`;
+      const data = await sanityClient.fetch(query);
+      console.log(data);
+      const { featuredBowls, mission, visit } = data;
+      setFeaturedBowls(featuredBowls);
+      setMission(mission);
+      setHours(visit.hours);
+    };
+
+    getData();
+  }, []);
+
   return (
     <div>
       <div className='flex flex-col justify-center pt-32 md:pt-20 pb-[320px] md:pb-[280px]'>
@@ -52,17 +67,17 @@ const Home = () => {
             Featured Bowls
           </h2>
           <div className='flex flex-col md:flex-row justify-center items-center md:justify-between gap-12'>
-            {arrayData.map((item) => (
-              <div key={item.name} className='flex flex-col gap-2 md:w-[30%]'>
+            {featuredBowls.map((bowl, index) => (
+              <div key={index} className='flex flex-col gap-2 md:w-[30%]'>
                 <img
                   className='sm:w-3/4 md:w-auto m-auto'
-                  src={item.image}
+                  src={loadImage(bowl.img)}
                   alt=''
                 ></img>
                 <h3 className='font-league text-xl md:text-2xl pt-2 md:pt-4 font-semibold'>
-                  {item.name}
+                  {bowl.name}
                 </h3>
-                <p className='font-light md:text-md'>{item.desc}</p>
+                <p className='font-light md:text-md'>{bowl.description}</p>
               </div>
             ))}
           </div>
@@ -77,14 +92,15 @@ const Home = () => {
 
       <div className='w-5/6 m-auto pb-24'>
         <div className=' text-primary flex items-center max-md:flex-col max-md:gap-12 justify-between'>
-          <img className='md:w-2/5' src={counter} alt=''></img>
+          {mission && (
+            <img className='md:w-2/5' src={loadImage(mission.img)} alt=''></img>
+          )}
           <div className='flex flex-col gap-2 max-md:items-center md:w-2/5'>
             <h2 className='font-league text-3xl md:text-5xl font-semibold'>
-              Our Mission
+              {mission?.heading}
             </h2>
             <p className='max-md:text-center leading-relaxed'>
-              To cultivate a healthier lifestyle through our fresh, flavorful,
-              and nutritious poke bowls.
+              {mission?.body}
             </p>
             <Link
               to='/about'
@@ -106,7 +122,7 @@ const Home = () => {
               <p>4215 University Way NE</p>
               <p>Seattle, WA 98105</p>
             </div>
-            <p>Open every day from 11 AM to 9 PM</p>
+            <PortableText value={hours} components={components} />
           </div>
           <iframe
             className='w-full md:w-2/5 border-none aspect-[3/2]'

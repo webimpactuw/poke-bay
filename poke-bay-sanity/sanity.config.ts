@@ -23,10 +23,10 @@ export default defineConfig({
         S.list()
           .title('Content')
           .items([
-            S.documentTypeListItem('home').title('Home'),
-            S.documentTypeListItem('about').title('About'),
+            singletonListItem(S, 'home', 'Home'),
+            singletonListItem(S, 'about', 'About'),
             singletonListItem(S, 'menu', 'Menu'),
-            S.documentTypeListItem('footer').title('Footer'),
+            singletonListItem(S, 'footer', 'Footer'),
           ]),
     }),
     visionTool(),

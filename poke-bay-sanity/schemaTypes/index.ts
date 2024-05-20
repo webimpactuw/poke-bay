@@ -1,4 +1,4 @@
-import homeFeaturedItem from './objects/homeFeaturedItem'
+import featuredBowl from './objects/featuredBowl'
 import bowl from './objects/bowl'
 import buildBowl from './objects/buildBowl'
 import step from './objects/step'
@@ -12,7 +12,7 @@ import menu from './documents/menu'
 import home from './documents/home'
 
 export const schemaTypes = [
-  homeFeaturedItem,
+  featuredBowl,
   about,
   footer,
   home,
